@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Maths Teacher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>I'm Your Virtual Maths Teacher</h1>
+    <div class="app-grid">
+        <div class="upload-image">
+            <div class="inner-upload-image">
+                <input type="file" hidden accept=".txt">
+                <img src="plus.svg" alt="Upload icon" id="icon">
+                <span>Upload a problem file</span>
+                <p class="hint">Optional: upload a text file containing a math problem.</p>
+            </div>
+            <textarea id="question" rows="5" placeholder="Type a math problem here, for example: 2+3*4, sin(pi/4), 3x+2=11, log(100), matrix([[1,2],[3,4]]), derivative(\"x^2\",x,3), limit(\"sin(x)/x\",x,0)"></textarea>
+            <p class="hint">Supports algebra, trigonometry, logs, complex numbers, matrices, derivatives, limits, and more.</p>
+            <div class="solution-controls">
+                <label for="languageSelect">Choose language:</label>
+                <select id="languageSelect">
+                    <option value="english">English</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="malayalam">Malayalam</option>
+                </select>
+                <span class="hint">Translated step-by-step support for new learners.</span>
+            </div>
+            <div class="button-row">
+                <button id="solveButton">Answer</button>
+                <button id="playStepsButton" class="secondary" type="button">Play Steps</button>
+            </div>
+            <div class="output">
+                <div id="summary"></div>
+                <div id="stepOutput" class="step-output"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
